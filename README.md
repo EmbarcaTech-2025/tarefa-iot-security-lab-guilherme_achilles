@@ -11,40 +11,12 @@ Instituição: EmbarcaTech - HBr
 Brasília, 04/06 de 2025
 
 ---
-# BitDogLab MQTT IoT Project
 
-Projeto de comunicação IoT utilizando BitDogLab (Raspberry Pi Pico W) com protocolo MQTT, implementando conectividade Wi-Fi, autenticação e criptografia básica.
 
 ## 🎯 Visão Geral
 
 Este projeto demonstra a implementação de um sistema IoT completo usando BitDogLab (Raspberry Pi Pico W), abrangendo desde conectividade básica Wi-Fi até implementação de segurança com criptografia e proteção contra ataques de replay.
 
-## 🛠️ Requisitos
-
-### Hardware
-- BitDogLab (Raspberry Pi Pico W)
-- Display integrado
-
-### Software
-- Raspberry Pi Pico SDK
-- Mosquitto MQTT Broker
-- Wireshark (para análise de tráfego)
-
-### Bibliotecas
-- `pico_cyw43_arch_lwip_threadsafe_background`
-- `pico_lwip_mqtt`
-- `pico_cyw43_driver`
-
-## 📁 Estrutura do Projeto
-
-```
-├── connections/
-│   ├── wifi_control.c      # Controle de conectividade Wi-Fi
-│   └── mqtt_comm.c         # Comunicação MQTT
-├── criptografias/          # Funções de criptografia
-├── main.c                  # Arquivo principal
-└── lwipopts.h             # Configurações LWIP
-```
 
 ## 🚀 Implementação
 
