@@ -78,6 +78,10 @@ A função de conexão Wi-Fi é executada no loop principal, recebendo:
 
 A implementação gerencia a inicialização do módulo Wi-Fi da Pico W e realiza conexão assíncrona e thread-safe.
 
+
+
+
+
 ---
 
 ### Etapa 2: Setup MQTT Básico
@@ -115,6 +119,15 @@ O arquivo `lwipopts.h` foi adaptado dos exemplos da extensão Raspberry Pi Pico 
 # Execute como administrador
 mosquitto -v
 ```
+<p align = "center">
+    <img src="assets/etapa_3.png"
+     width="100px">
+</p>
+
+<p align = "center">
+    <img src= "assets/etapa_3_2.png"
+     width="100px">
+</p>
 
 ---
 
@@ -133,6 +146,16 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 - Implementação de autenticação baseada em credenciais
 - Validação de usuários através de arquivo de senhas
 
+<p align = "center">
+    <img src= "assets/etapa_4.png"
+     width="100px">
+</p>
+
+<p align = "center">
+    <img src= "assets/etapa_4_2.png"
+     width="100px">
+</p>
+
 ---
 
 ### Etapa 5: Criptografia Leve (XOR)
@@ -149,6 +172,11 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 2. Subscriber recebe e descriptografa a mensagem
 3. Resultado exibido no display
 4. Tráfego criptografado pode ser analisado via Wireshark
+
+<p align = "center">
+    <img src="assets/etapa_5.png"
+     width="100px">
+</p>
 
 ---
 
@@ -168,6 +196,11 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 - Proteção contra retransmissão maliciosa
 - Validação temporal de mensagens
 - Detecção automática de tentativas de replay
+
+<p align = "center">
+    <img src= "assets/ETAPA_6.png"
+     width="100px">
+</p>
 
 ---
 
