@@ -2,13 +2,13 @@
 
 # Tarefa: IoT Security Lab - EmbarcaTech 2025
 
-Autor: **Insira Seu Nome**
+Autor: **Guilherme Achilles de Oliveira e Aguiar**
 
 Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Campinas, ___ de 2025
+Brasília, 04/06de 2025
 
 ---
 # BitDogLab MQTT IoT Project
