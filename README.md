@@ -204,25 +204,6 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 
 ---
 
-## 🔧 Como Usar
-
-### 1. Configuração inicial
-```c
-// Configure as credenciais Wi-Fi
-#define WIFI_SSID "sua_rede"
-#define WIFI_PASSWORD "sua_senha"
-
-// Configure o broker MQTT
-#define MQTT_BROKER_IP "192.168.x.x"
-#define MQTT_PORT 1883
-```
-
-
-### 3. Execução
-1. Faça upload do firmware para a BitDogLab
-2. Inicie o broker Mosquitto
-3. Monitor via display integrado
-
 ## 🔍 Troubleshooting
 
 ### Problemas Comuns
