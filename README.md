@@ -79,7 +79,10 @@ A função de conexão Wi-Fi é executada no loop principal, recebendo:
 A implementação gerencia a inicialização do módulo Wi-Fi da Pico W e realiza conexão assíncrona e thread-safe.
 
 
-
+<p align = "center">
+    <img src="assets/etapa_1.png"
+     width="1080px">
+</p>
 
 
 ---
