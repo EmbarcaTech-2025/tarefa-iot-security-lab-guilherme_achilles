@@ -204,21 +204,5 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 
 ---
 
-## 🔍 Troubleshooting
-
-### Problemas Comuns
-
-**Falha na conexão Wi-Fi:**
-- Verifique SSID e senha
-- Confirme se a rede está ativa
-- Verifique compatibilidade da rede (2.4GHz)
-
-**Erro de conexão MQTT:**
-- Confirme se o broker está rodando
-- Verifique IP e porta do broker
-- Teste credenciais de autenticação
-
----
-
 ## 📜 Licença
 GNU GPL-3.0.
