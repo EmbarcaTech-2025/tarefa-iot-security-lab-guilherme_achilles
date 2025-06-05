@@ -179,16 +179,14 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 - Processamento de timestamp na função subscribe
 - Validação temporal das mensagens
 - Exibição de "Replay detectado" em caso de ataque identificado
-
-#### Segurança Aprimorada
-- Proteção contra retransmissão maliciosa
-- Validação temporal de mensagens
-- Detecção automática de tentativas de replay
+-  O video da detecção de relays esta disponivel logo abaixo.
 
 <p align = "center">
     <img src= "assets/ETAPA_6.png"
    width="1080px">
 </p>
+
+https://youtu.be/6cZgpkrKTj8
 
 ---
 
