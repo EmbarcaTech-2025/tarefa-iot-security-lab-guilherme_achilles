@@ -186,7 +186,9 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
    width="1080px">
 </p>
 
-https://youtu.be/6cZgpkrKTj8
+
+https://github.com/user-attachments/assets/1d9ac055-25f1-45e4-bd8a-39ef659f027b
+
 
 ---
 
