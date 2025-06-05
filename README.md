@@ -2,33 +2,18 @@
 
 # Tarefa: IoT Security Lab - EmbarcaTech 2025
 
-Autor: **Insira Seu Nome**
+Autor: **Guilherme Achilles de Oliveira e Aguiar**
 
 Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Campinas, ___ de 2025
+Brasília, 04/06de 2025
 
 ---
 # BitDogLab MQTT IoT Project
 
 Projeto de comunicação IoT utilizando BitDogLab (Raspberry Pi Pico W) com protocolo MQTT, implementando conectividade Wi-Fi, autenticação e criptografia básica.
-
-## 📋 Índice
-
-- [Visão Geral](#visão-geral)
-- [Requisitos](#requisitos)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Implementação](#implementação)
-  - [Etapa 1: Conectividade Wi-Fi](#etapa-1-conectividade-wi-fi)
-  - [Etapa 2: Setup MQTT Básico](#etapa-2-setup-mqtt-básico)
-  - [Etapa 3: Publicação MQTT sem Segurança](#etapa-3-publicação-mqtt-sem-segurança)
-  - [Etapa 4: Autenticação no Mosquitto](#etapa-4-autenticação-no-mosquitto)
-  - [Etapa 5: Criptografia Leve (XOR)](#etapa-5-criptografia-leve-xor)
-  - [Etapa 6: Proteção contra Replay Attack](#etapa-6-proteção-contra-replay-attack)
-- [Como Usar](#como-usar)
-- [Troubleshooting](#troubleshooting)
 
 ## 🎯 Visão Geral
 
@@ -78,6 +63,13 @@ A função de conexão Wi-Fi é executada no loop principal, recebendo:
 
 A implementação gerencia a inicialização do módulo Wi-Fi da Pico W e realiza conexão assíncrona e thread-safe.
 
+
+<p align = "center">
+    <img src="assets/etapa_1.png"
+     width="1080px">
+</p>
+
+
 ---
 
 ### Etapa 2: Setup MQTT Básico
@@ -115,6 +107,15 @@ O arquivo `lwipopts.h` foi adaptado dos exemplos da extensão Raspberry Pi Pico 
 # Execute como administrador
 mosquitto -v
 ```
+<p align = "center">
+    <img src="assets/etapa_3.png"
+     width="1080px">
+</p>
+
+<p align = "center">
+    <img src= "assets/etapa_3_2.png"
+     width="1080px">
+</p>
 
 ---
 
@@ -133,6 +134,16 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 - Implementação de autenticação baseada em credenciais
 - Validação de usuários através de arquivo de senhas
 
+<p align = "center">
+    <img src= "assets/etapa_4.png"
+   width="1080px">
+</p>
+
+<p align = "center">
+    <img src= "assets/etapa_4_2.png"
+     width="1080px">
+</p>
+
 ---
 
 ### Etapa 5: Criptografia Leve (XOR)
@@ -149,6 +160,11 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 2. Subscriber recebe e descriptografa a mensagem
 3. Resultado exibido no display
 4. Tráfego criptografado pode ser analisado via Wireshark
+
+<p align = "center">
+    <img src="assets/etapa_5.png"
+     width="1080px">
+</p>
 
 ---
 
@@ -169,40 +185,10 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 - Validação temporal de mensagens
 - Detecção automática de tentativas de replay
 
----
-
-## 🔧 Como Usar
-
-### 1. Configuração inicial
-```c
-// Configure as credenciais Wi-Fi
-#define WIFI_SSID "sua_rede"
-#define WIFI_PASSWORD "sua_senha"
-
-// Configure o broker MQTT
-#define MQTT_BROKER_IP "192.168.x.x"
-#define MQTT_PORT 1883
-```
-
-
-### 3. Execução
-1. Faça upload do firmware para a BitDogLab
-2. Inicie o broker Mosquitto
-3. Monitor via display integrado
-
-## 🔍 Troubleshooting
-
-### Problemas Comuns
-
-**Falha na conexão Wi-Fi:**
-- Verifique SSID e senha
-- Confirme se a rede está ativa
-- Verifique compatibilidade da rede (2.4GHz)
-
-**Erro de conexão MQTT:**
-- Confirme se o broker está rodando
-- Verifique IP e porta do broker
-- Teste credenciais de autenticação
+<p align = "center">
+    <img src= "assets/ETAPA_6.png"
+   width="1080px">
+</p>
 
 ---
 
