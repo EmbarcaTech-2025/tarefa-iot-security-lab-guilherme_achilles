@@ -15,21 +15,6 @@ Campinas, ___ de 2025
 
 Projeto de comunicação IoT utilizando BitDogLab (Raspberry Pi Pico W) com protocolo MQTT, implementando conectividade Wi-Fi, autenticação e criptografia básica.
 
-## 📋 Índice
-
-- [Visão Geral](#visão-geral)
-- [Requisitos](#requisitos)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Implementação](#implementação)
-  - [Etapa 1: Conectividade Wi-Fi](#etapa-1-conectividade-wi-fi)
-  - [Etapa 2: Setup MQTT Básico](#etapa-2-setup-mqtt-básico)
-  - [Etapa 3: Publicação MQTT sem Segurança](#etapa-3-publicação-mqtt-sem-segurança)
-  - [Etapa 4: Autenticação no Mosquitto](#etapa-4-autenticação-no-mosquitto)
-  - [Etapa 5: Criptografia Leve (XOR)](#etapa-5-criptografia-leve-xor)
-  - [Etapa 6: Proteção contra Replay Attack](#etapa-6-proteção-contra-replay-attack)
-- [Como Usar](#como-usar)
-- [Troubleshooting](#troubleshooting)
-
 ## 🎯 Visão Geral
 
 Este projeto demonstra a implementação de um sistema IoT completo usando BitDogLab (Raspberry Pi Pico W), abrangendo desde conectividade básica Wi-Fi até implementação de segurança com criptografia e proteção contra ataques de replay.
