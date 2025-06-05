@@ -121,12 +121,12 @@ mosquitto -v
 ```
 <p align = "center">
     <img src="assets/etapa_3.png"
-     width="100px">
+     width="1080px">
 </p>
 
 <p align = "center">
     <img src= "assets/etapa_3_2.png"
-     width="100px">
+     width="1080px">
 </p>
 
 ---
@@ -148,12 +148,12 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 
 <p align = "center">
     <img src= "assets/etapa_4.png"
-     width="100px">
+   width="1080px">
 </p>
 
 <p align = "center">
     <img src= "assets/etapa_4_2.png"
-     width="100px">
+     width="1080px">
 </p>
 
 ---
@@ -175,7 +175,7 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 
 <p align = "center">
     <img src="assets/etapa_5.png"
-     width="100px">
+     width="1080px">
 </p>
 
 ---
@@ -199,7 +199,7 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 
 <p align = "center">
     <img src= "assets/ETAPA_6.png"
-     width="100px">
+   width="1080px">
 </p>
 
 ---
