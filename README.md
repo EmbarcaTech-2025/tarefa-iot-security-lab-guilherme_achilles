@@ -165,7 +165,7 @@ https://github.com/user-attachments/assets/1d9ac055-25f1-45e4-bd8a-39ef659f027b
 
 A criptografia XOR nao é escalavel, pois elas pode ser facilmente quebradas e não suporta autenticação, integridade ou proteção contra ataques sofisticados, tornando-se inviáveis em aplicações reais, mesmo em ambientes escolares, além de não se adaptar bem quando o número de dispositivos cresce. 
 
-As teécnicas escalavaeis são:
+As teécnicas escalaveis são:
 
 - HMAC que permite verificar a integridade e autenticidade das mensagens de forma leve;
 - Proteção contra replay, feita com timestamps ou contadores, que impede que mensagens antigas sejam reutilizadas por atacantes;
