@@ -189,6 +189,17 @@ Este comando gera um arquivo contendo o ID do usuário e o hash da senha corresp
 
 https://github.com/user-attachments/assets/1d9ac055-25f1-45e4-bd8a-39ef659f027b
 
+### Quais técnicas sao escalaveis e podem ser colocadas em um ambiente escolar ?
+
+A criptografia XOR nao é escalavel, pois elas pode ser facilmente quebradas e não suporta autenticação, integridade ou proteção contra ataques sofisticados, tornando-se inviáveis em aplicações reais, mesmo em ambientes escolares, além de não se adaptar bem quando o número de dispositivos cresce. 
+
+As teécnicas escalavaeis são:
+
+- HMAC que permite verificar a integridade e autenticidade das mensagens de forma leve;
+- Proteção contra replay, feita com timestamps ou contadores, que impede que mensagens antigas sejam reutilizadas por atacantes;
+- criptografia AES, que protege os dados transmitidos de forma eficiente e segura.
+
+Todas essas técnicas são escaláveis, pois funcionam bem com poucos ou muitos dispositivos, mantendo a segurança sem exigir grandes recursos.
 
 ---
 
