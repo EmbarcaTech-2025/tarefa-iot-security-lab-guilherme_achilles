@@ -15,9 +15,9 @@ if(WIN32)
 else()
     set(USERHOME $ENV{HOME})
 endif()
-set(sdkVersion 2.1.1)
-set(toolchainVersion 14_2_Rel1)
-set(picotoolVersion 2.1.1)
+set(sdkVersion 1.5.1)
+set(toolchainVersion 13_2_Rel1)
+set(picotoolVersion 2.0.0)
 set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
 if (EXISTS ${picoVscode})
     include(${picoVscode})
@@ -28,51 +28,76 @@ set(PICO_BOARD pico_w CACHE STRING "Board type")
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-project(iot_security_lab C CXX ASM)
+project(unidade_2_seguranca_io C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(iot_security_lab iot_security_lab.c 
-    src/mqtt_comm.c
-    src/wifi_conn.c
-    src/xor_cipher.c
-)
+add_executable(unidade_2_seguranca_io app/main_subscribe_xor_relay.c )
 
-pico_set_program_name(iot_security_lab "iot_security_lab")
-pico_set_program_version(iot_security_lab "0.1")
+add_library(connections STATIC connections/wifi_control.c connections/mqtt_comm.c connections/criptografias.c)
+add_library(driver STATIC driver/ssd1306.c driver/ssd1306_i2c.c)
+add_library(hal STATIC hal/write_display.c)
+
+pico_set_program_name(unidade_2_seguranca_io "unidade_2_seguranca_io")
+pico_set_program_version(unidade_2_seguranca_io "0.1")
 
 # Modify the below lines to enable/disable output over UART/USB
-pico_enable_stdio_uart(iot_security_lab 0)
-pico_enable_stdio_usb(iot_security_lab 1)
+pico_enable_stdio_uart(unidade_2_seguranca_io 0)
+pico_enable_stdio_usb(unidade_2_seguranca_io 1)
 
 # Add the standard library to the build
-target_link_libraries(iot_security_lab
-        # Biblioteca padrão do Pico SDK, que fornece funções básicas para o RP2040 (GPIO, temporizadores, UART, etc.).
+target_link_libraries(unidade_2_seguranca_io
         pico_stdlib
-        # Oferece suporte Wi-Fi (CYW43) com LwIP (pilha TCP/IP) em um modo thread-safe em segundo plano.
+        connections
+        hal)
+
+target_link_libraries(connections
+        pico_stdlib
         pico_cyw43_arch_lwip_threadsafe_background
-        # Adiciona suporte a cliente MQTT sobre o LwIP.
         pico_lwip_mqtt
-        # A pilha Lightweight IP (LwIP), que fornece funcionalidades TCP/IP (HTTP, MQTT, UDP, DHCP, etc.).
-        pico_lwip
-        # O driver do chip Wi-Fi CYW43 (usado no Pico W).
         pico_cyw43_driver
-        # pico_time
-        # pico_unique_id
+        pico_mbedtls
+        hal
+        driver
+)
+
+target_link_libraries(hal
+        pico_stdlib
+        driver
+        )
+
+target_link_libraries(driver
+        pico_stdlib
+        hardware_i2c
         )
 
 # Add the standard include files to the build
-target_include_directories(iot_security_lab PRIVATE
+target_include_directories(unidade_2_seguranca_io PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/include
+)
+
+target_include_directories(connections PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/include
+)
+
+target_include_directories(hal PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/include
+)
+
+target_include_directories(driver PUBLIC
+        ${CMAKE_CURRENT_LIST_DIR}
+        ${CMAKE_CURRENT_LIST_DIR}/include
 )
 
 # Add any user requested libraries
-target_link_libraries(iot_security_lab 
-        
+target_link_libraries(unidade_2_seguranca_io 
         )
 
-pico_add_extra_outputs(iot_security_lab)
+pico_add_extra_outputs(unidade_2_seguranca_io)
 

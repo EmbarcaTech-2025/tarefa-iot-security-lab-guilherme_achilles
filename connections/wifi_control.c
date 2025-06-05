@@ -1,6 +1,7 @@
-#include "include/wifi_conn.h"         // Cabeçalho com a declaração da função de conexão Wi-Fi
 #include "pico/cyw43_arch.h"           // Biblioteca para controle do chip Wi-Fi CYW43 no Raspberry Pi Pico W
 #include <stdio.h>                     // Biblioteca padrão de entrada/saída (para usar printf)
+#include "lwipopts.h"             // Configurações customizadas do lwIP
+
 
 /**
  * Função: connect_to_wifi
@@ -21,6 +22,6 @@ void connect_to_wifi(const char *ssid, const char *password) {
     if (cyw43_arch_wifi_connect_timeout_ms(ssid, password, CYW43_AUTH_WPA2_AES_PSK, 30000)) {
         printf("Erro ao conectar\n");  // Se falhar, imprime mensagem de erro.
     } else {        
-        printf("Conectado ao Wi-Fi\n");  // Se conectar com sucesso, exibe confirmação.
+        printf("Conectado ao wifi: %s\n",ssid);  // Se conectar com sucesso, exibe confirmação.
     }
 }
