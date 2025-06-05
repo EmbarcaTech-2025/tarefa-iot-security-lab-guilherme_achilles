@@ -8,7 +8,7 @@ Curso: Residência Tecnológica em Sistemas Embarcados
 
 Instituição: EmbarcaTech - HBr
 
-Brasília, 04/06de 2025
+Brasília, 04/06 de 2025
 
 ---
 # BitDogLab MQTT IoT Project
